@@ -1,4 +1,4 @@
-// convert vietname to english
+// convert vietnamese to english
 function convertVietnameseToEnglish(str) {
   const vietnameseToEnglishMap = {
     'á|à|ả|ã|ạ|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ': 'a',
