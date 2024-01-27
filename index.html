@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert vietname to english</title>
+  <style>
+    .convert {
+      display: flex;
+      justify-content: space-around;
+      height: 100%;
+    }
+
+    textarea {
+      width: 40%;
+      height: 100%;
+      resize: vertical;
+    }
+
+    textarea#result {
+      background-color: #f1f1f1;
+    }
+
+    footer {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="convert">
+    <textarea name="input" id="input" cols="50" rows="40" placeholder="Please input your text here"></textarea>
+    <textarea name="result" id="result" cols="50" rows="40"></textarea>
+  </div>
+  <footer>
+    <p>Created by <a href="mailto:hungnm.pnv@gmail.com">Hùng Nguyễn</a></p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
