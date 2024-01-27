@@ -25,9 +25,33 @@ function convertVietnameseToEnglish(str) {
   return str;
 }
 
-const input = document.getElementById('input');
-input.addEventListener('change', function (event) {
-  const value = event.target.value;
-  const result = convertVietnameseToEnglish(value);
+function startConvert() {
+  const input = document.getElementById('input');
+  if (!input.value.trim()) {
+    alert('Vui lòng nhập dữ liệu');
+    return;
+  }
+  const result = convertVietnameseToEnglish(input.value);
   document.getElementById('result').innerHTML = result;
+}
+
+const button = document.getElementById('convert');
+button.addEventListener('click', startConvert);
+
+const buttonCopy = document.getElementById('copy');
+buttonCopy.addEventListener('click', () => {
+  const copyText = document.getElementById('result');
+  if (!copyText.value.trim()) {
+    alert('Vui lòng nhập dữ liệu');
+    return;
+  }
+
+  navigator.clipboard
+    .writeText(copyText.value)
+    .then(() => {
+      alert('Đã copy vào clipboard');
+    })
+    .catch((err) => {
+      console.error('Unable to copy text to clipboard', err);
+    });
 });

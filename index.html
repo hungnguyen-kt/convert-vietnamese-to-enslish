@@ -10,27 +10,53 @@
       display: flex;
       justify-content: space-around;
       height: 100%;
+      align-items: center;
     }
 
     textarea {
       width: 40%;
       height: 100%;
       resize: vertical;
+      border-radius: 4px;
+      padding: 8px;
     }
 
     textarea#result {
       background-color: #f1f1f1;
     }
 
+    .action {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 4px 0;
+      min-width: 100px;
+    }
+
     footer {
       text-align: center;
+      margin-top: 16px;
     }
   </style>
 </head>
 
 <body>
   <div class="convert">
-    <textarea name="input" id="input" cols="50" rows="40" placeholder="Please input your text here"></textarea>
+    <textarea name="input" id="input" cols="50" rows="40" placeholder="Nhập tiếng Việt tại đây"></textarea>
+    <div class="action">
+      <button type="button" id="convert">Convert</button>
+      <button type="button" id="copy">Copy</button>
+    </div>
     <textarea name="result" id="result" cols="50" rows="40"></textarea>
   </div>
   <footer>
